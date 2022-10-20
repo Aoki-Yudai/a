@@ -256,7 +256,7 @@ namespace Tello {
     //% group="xyz移動"
     export function xyz(x:number,y:number,z:number,speed:number): void {
         if (flying == 1) {
-            let sendstring = "go "+ x + " " + y + " " + z + " "+ "speed"
+            let sendstring = "go "+ x + " " + y + " " + z + " "+ speed
             radio.sendString(sendstring)
         }
     }
