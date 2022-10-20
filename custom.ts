@@ -21,7 +21,7 @@ namespace Tello {
     //% block="スピードを設定する %value"
     //% group="設定"
     export function Setspped(value : number): void {
-         radio.sendString("speed " + value)
+         radio.sendString("speed=" + value)
     }
 
     /**
@@ -33,7 +33,7 @@ namespace Tello {
     //% group="初心者向け"
     export function up(value : number): void {
         if (flying == 1) {
-            radio.sendString("up " + value)
+            radio.sendString("up=" + value)
             flying = 1
         }
     }
@@ -47,7 +47,7 @@ namespace Tello {
     //% group="初心者向け"
     export function down(value : number): void {
         if (flying == 1) {
-            radio.sendString("down " + value)
+            radio.sendString("down=" + value)
             flying = 1
         }
     }
@@ -61,7 +61,7 @@ namespace Tello {
     //% group="初心者向け"
     export function forward(value : number): void {
         if (flying == 1) {
-            radio.sendString("forward " + value)
+            radio.sendString("forward=" + value)
             flying = 1
         }
     }
@@ -75,7 +75,7 @@ namespace Tello {
     //% group="初心者向け"
     export function back(value : number): void {
         if (flying == 1) {
-            radio.sendString("back " + value)
+            radio.sendString("back=" + value)
             flying = 1
         }
     }
@@ -89,7 +89,7 @@ namespace Tello {
     //% group="初心者向け"
     export function left(value : number): void {
         if (flying == 1) {
-            radio.sendString("left " + value)
+            radio.sendString("left=" + value)
             flying = 1
         }
     }
@@ -103,7 +103,7 @@ namespace Tello {
     //% group="初心者向け"
     export function right(value : number): void {
         if (flying == 1) {
-            radio.sendString("right " + value)
+            radio.sendString("right=" + value)
             flying = 1
         }
     }
@@ -117,7 +117,7 @@ namespace Tello {
     //% group="初心者向け"
     export function rotate_cw(value : number): void {
         if (flying == 1) {
-            radio.sendString("cw " + value)
+            radio.sendString("cw=" + value)
             flying = 1
         }
     }
@@ -131,7 +131,7 @@ namespace Tello {
     //% group="初心者向け"
     export function rotate_ccw(value : number): void {
         if (flying == 1) {
-            radio.sendString("ccw " + value)
+            radio.sendString("ccw=" + value)
             flying = 1
         }
     }
@@ -196,7 +196,7 @@ namespace Tello {
     //% group="上級者向け"
     export function RCmode(a:number,b:number,c:number,d:number): void {
         if (flying == 1) {
-            let sendstring = "rc "+ a + " " + b + " " + c + " " + d
+            let sendstring = "rc="+ a + "=" + b + "=" + c + "=" + d
             radio.sendString(sendstring)
         }
     }
@@ -208,7 +208,7 @@ namespace Tello {
     //% group="フリップ"
     export function forward_flip(): void {
         if (flying == 1) {
-            radio.sendString("flip f")
+            radio.sendString("flip=f")
         }
     }
 
@@ -219,7 +219,7 @@ namespace Tello {
     //% group="フリップ"
     export function back_flip(): void {
         if (flying == 1) {
-            radio.sendString("flip b")
+            radio.sendString("flip=b")
         }
     }
 
@@ -230,7 +230,7 @@ namespace Tello {
     //% group="フリップ"
     export function left_flip(): void {
         if (flying == 1) {
-            radio.sendString("flip l")
+            radio.sendString("flip=l")
         }
     }
 
@@ -241,7 +241,7 @@ namespace Tello {
     //% group="フリップ"
     export function right_flip(): void {
         if (flying == 1) {
-            radio.sendString("flip r")
+            radio.sendString("flip=r")
         }
     }
     
@@ -256,7 +256,7 @@ namespace Tello {
     //% group="xyz移動"
     export function xyz(x:number,y:number,z:number,speed:number): void {
         if (flying == 1) {
-            let sendstring = "go "+ x + " " + y + " " + z + " "+ speed
+            let sendstring = "go="+ x + "=" + y + "=" + z + "="+ speed
             radio.sendString(sendstring)
         }
     }
