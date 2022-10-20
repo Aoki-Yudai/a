@@ -15,7 +15,7 @@ namespace Tello {
     }
 
     /**
-     * 通信グループの設定を行う．受信機と送信機のグループ設定は合わせてね！
+     * スピードの設定を行う、10~100の間で設定する、1につき1cm進む！
      * @param スピードの設定を行う value 10-100, eg: 10
      */
     //% block="スピードを設定する %value"
@@ -242,6 +242,18 @@ namespace Tello {
     export function right_flip(): void {
         if (flying == 1) {
             radio.sendString("flip r")
+        }
+    }
+    
+     /**
+     * ドローンがxyzで移動します
+     */
+    //% block="xyz"
+    //% group="xyz移動"
+    export function xyz(x:number,y:number,z:number): void {
+        if (flying == 1) {
+            let sendstring = "go "+ x + " " + y + " " + z + " "+ "speed"
+            radio.sendString(sendstring)
         }
     }
 }
