@@ -251,7 +251,7 @@ namespace Tello {
      * @param y y -100-100, eg: 0
      * @param z z -100-100, eg: 0
      */
-    //% block="xyz"
+    //% block="xyz | x %x y %y z %z"
     //% group="xyz移動"
     export function xyz(x:number,y:number,z:number): void {
         if (flying == 1) {
