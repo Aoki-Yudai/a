@@ -247,6 +247,9 @@ namespace Tello {
     
      /**
      * ドローンがxyzで移動します
+     * @param x x -100-100, eg: 0
+     * @param y y -100-100, eg: 0
+     * @param z z -100-100, eg: 0
      */
     //% block="xyz"
     //% group="xyz移動"
