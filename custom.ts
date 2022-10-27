@@ -260,6 +260,17 @@ namespace Tello {
             radio.sendString(sendstring)
         }
     }
+    
+     /**
+     * 電源AをONにする！
+     */
+    //% block="AをON"
+    //% group="電源をON"
+    export function energy_on_A(): void {
+        if (flying == 1) {
+            radio.sendString("energy_on_A")
+        }
+    }
 }
 
 let flying = 0
